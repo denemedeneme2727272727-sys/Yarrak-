@@ -8,8 +8,8 @@ app.use(express.json());
 
 // iyzico Test Anahtarları
 const iyzipay = new Iyzipay({
-  apiKey: 'sandbox-xxxx', // iyzico Sandbox API Key
-  secretKey: 'sandbox-xxxx', // iyzico Sandbox Secret Key
+  apiKey: 'sandbox-RF4srVABpmX4NAkT9L5LWNxTYAQYJ0rg', // iyzico Sandbox API Key
+  secretKey: 'sandbox-sBbS5KWuah5z7OrFrApeMk4IK4kFD2tu', // iyzico Sandbox Secret Key
   uri: 'https://sandbox-api.iyzipay.com'
 });
 
