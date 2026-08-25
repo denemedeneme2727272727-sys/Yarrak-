@@ -6,10 +6,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Senin verdiğin iyzico Sandbox Anahtarları
+// iyzico Test Anahtarları
 const iyzipay = new Iyzipay({
-  apiKey: 'sandbox-RF4srVABpmX4NAkT9L5LWNxTYAQYJ0rg',
-  secretKey: 'sandbox-sBbS5KWuah5z7OrFrApeMk4IK4kFD2tu',
+  apiKey: 'sandbox-RF4srVABpmX4NAkT9L5LWNxTYAQYJ0rg', // iyzico Sandbox API Key
+  secretKey: 'sandbox-sBbS5KWuah5z7OrFrApeMk4IK4kFD2t', // iyzico Sandbox Secret Key
   uri: 'https://sandbox-api.iyzipay.com'
 });
 
@@ -23,7 +23,6 @@ app.post('/payment-init', (req, res) => {
     currency: Iyzipay.CURRENCY.TRY,
     basketId: 'B' + Date.now(),
     paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
-    iyziFormLayout: Iyzipay.FORM_LAYOUT.RESPONSIVE,
     callbackUrl: 'https://yarrak-woad.vercel.app/payment-callback',
     enabledInstallments: [1],
     buyer: {
